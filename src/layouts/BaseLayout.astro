@@ -1,0 +1,55 @@
+---
+import '@fontsource-variable/fraunces/full.css';
+import '@fontsource-variable/dm-sans/wght.css';
+const { title = 'DIVERTI — Diverticular Health Tracker', description = 'A thoughtful way to keep track of food, fiber, hydration, and digestive wellbeing.' } = Astro.props;
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#F7F5EF" />
+    <meta name="description" content={description} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
+
+<style is:global>
+  :root {
+    color-scheme: light;
+    --ivory: #F7F5EF;
+    --cream: #FFFEFA;
+    --eucalyptus: #526B5C;
+    --sage: #A8B5A2;
+    --charcoal: #28312C;
+    --clay: #C9876B;
+    --muted: #646D66;
+    --line: rgba(40, 49, 44, .15);
+    --serif: 'Fraunces', 'Iowan Old Style', 'Palatino Linotype', Georgia, serif;
+    --sans: 'DM Sans', 'Avenir Next', Avenir, sans-serif;
+    font-family: var(--sans);
+    color: var(--charcoal);
+    background: var(--ivory);
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    scroll-behavior: smooth;
+  }
+  *, *::before, *::after { box-sizing: border-box; }
+  body { margin: 0; min-width: 320px; }
+  a { color: inherit; }
+  a:focus-visible, button:focus-visible { outline: 3px solid var(--clay); outline-offset: 4px; border-radius: 3px; }
+  ::selection { color: var(--cream); background: var(--eucalyptus); }
+  .shell { width: min(1180px, calc(100% - 64px)); margin-inline: auto; }
+  .eyebrow { margin: 0 0 20px; color: var(--eucalyptus); font-size: .72rem; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; }
+  .serif { font-family: var(--serif); font-weight: 400; letter-spacing: -.045em; }
+  .section { padding-block: clamp(86px, 11vw, 150px); }
+  .section-title { max-width: 760px; margin: 0; font-family: var(--serif); font-size: clamp(2.7rem, 6vw, 5.25rem); line-height: .99; font-weight: 400; letter-spacing: -.055em; }
+  .section-copy { color: var(--muted); font-size: clamp(1rem, 1.35vw, 1.12rem); line-height: 1.75; }
+  @media (max-width: 640px) {
+    .shell { width: min(100% - 40px, 520px); }
+    .section { padding-block: 82px; }
+  }
+</style>

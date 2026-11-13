@@ -1,0 +1,264 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SiteHeader from '../components/SiteHeader.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+---
+<BaseLayout>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <SiteHeader />
+
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="hero-inner shell">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="eyebrow-dot"></span> Diverticular Health Tracker</p>
+          <h1>A little more<br /><em>in tune</em> with you.</h1>
+          <p class="hero-description">A thoughtful place to keep track of food, fiber, hydration, and how you feel—one day at a time.</p>
+          <a class="button button-primary" href="#coming-soon">Coming soon to iPhone <span aria-hidden="true">↗</span></a>
+          <p class="hero-footnote">Small observations. Your own pace.</p>
+        </div>
+        <figure class="hero-product">
+          <div class="device device-hero">
+            <img src="/screenshots/today.png" width="1260" height="2736" alt="DIVERTI Today screen showing daily quick log actions and a summary of fiber, hydration, symptoms, and bowel movements" loading="eager" decoding="async" fetchpriority="high" />
+          </div>
+          <figcaption><span class="caption-dot"></span> Your day, at a glance</figcaption>
+        </figure>
+      </div>
+      <div class="hero-edge shell"><span>Made for everyday awareness</span><span>01 <i>—</i> 03</span></div>
+    </section>
+
+    <section class="why section" id="why">
+      <div class="shell why-layout">
+        <div class="why-lead">
+          <p class="eyebrow">Why DIVERTI</p>
+          <h2>Make room for<br /><em>what you notice.</em></h2>
+        </div>
+        <div class="why-message">
+          <p>Living with diverticular health concerns can mean keeping track of a lot. DIVERTI is being made to give those everyday notes a thoughtful place to come together.</p>
+          <p>Food, hydration, symptoms, and bowel movements—organized at your pace, so it’s easier to look back on your own days.</p>
+          <span class="why-signoff">A little more in tune <span aria-hidden="true">↗</span></span>
+        </div>
+      </div>
+    </section>
+
+    <section class="tracking section" id="tracking">
+      <div class="shell tracking-layout">
+        <figure class="diary-product">
+          <div class="device device-editorial">
+            <img src="/screenshots/diary.png" width="1260" height="2736" alt="DIVERTI Diary screen with a dated list of food, symptom, and drink entries" loading="eager" decoding="async" />
+          </div>
+          <figcaption><span class="caption-dot"></span> A running record of your day</figcaption>
+        </figure>
+        <div class="tracking-copy">
+          <p class="eyebrow">Everyday tracking</p>
+          <h2>Keep the details<br /><em>in one place.</em></h2>
+          <p class="section-intro">Capture the parts of your day you want to remember. Add an entry as it happens, or take a moment to fill in your diary later.</p>
+          <ul class="tracking-list">
+            <li><span class="list-mark" aria-hidden="true">01</span><div><h3>Food &amp; fiber</h3><p>Log what you eat, look up foods, or scan a barcode.</p></div></li>
+            <li><span class="list-mark" aria-hidden="true">02</span><div><h3>Hydration</h3><p>Keep a simple record of what you drink.</p></div></li>
+            <li><span class="list-mark" aria-hidden="true">03</span><div><h3>Symptoms</h3><p>Make a note of how you feel.</p></div></li>
+            <li><span class="list-mark" aria-hidden="true">04</span><div><h3>Bowel movements</h3><p>Record them alongside the rest of your day.</p></div></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="patterns section" id="patterns">
+      <div class="shell patterns-layout">
+        <div class="patterns-copy">
+          <p class="eyebrow">Understand your patterns</p>
+          <h2>Look back.<br /><em>See your own story.</em></h2>
+          <p class="section-intro">Personal goals, history, and summaries help you review what you’ve recorded over time. Exportable reports make it easier to take your notes with you.</p>
+          <p class="patterns-note">A record for reflection, not a diagnosis.</p>
+        </div>
+        <figure class="trends-product">
+          <div class="device device-editorial">
+            <img src="/screenshots/trends.png" width="1260" height="2736" alt="DIVERTI Trends screen showing 7, 14, and 30 day summaries for hydration and food and fiber" loading="eager" decoding="async" />
+          </div>
+          <figcaption><span class="caption-dot"></span> Summaries of what you’ve logged</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="privacy section" id="privacy">
+      <div class="shell privacy-layout">
+          <div class="privacy-title">
+          <p class="eyebrow">Private by design</p>
+          <h2>Your health notes<br />belong <em>to you.</em></h2>
+        </div>
+        <div class="privacy-copy">
+          <p class="privacy-intro">DIVERTI is designed around local-first storage, with your records kept on your device by default.</p>
+          <div class="privacy-details">
+            <div><span class="detail-index">01</span><h3>On your device</h3><p>Your tracking history is stored locally by default.</p></div>
+            <div><span class="detail-index">02</span><h3>Your choice to export</h3><p>You control when to export a report from your records.</p></div>
+          </div>
+          <p class="privacy-caveat">Food lookup may make network requests to retrieve food information.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="coming" id="coming-soon">
+      <div class="shell coming-inner">
+        <p class="eyebrow">On its way</p>
+        <h2>DIVERTI is coming<br /><em>soon to iPhone.</em></h2>
+        <a class="button button-light" href="mailto:support@diverti.app">Questions? Get in touch <span aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+  </main>
+
+  <SiteFooter />
+</BaseLayout>
+
+<style>
+  .skip-link { position: absolute; z-index: 10; left: 16px; top: 14px; padding: 12px 16px; background: var(--cream); transform: translateY(-160%); }
+  .skip-link:focus { transform: translateY(0); }
+  .site-header { min-height: 88px; display: flex; align-items: center; justify-content: space-between; gap: 28px; }
+  .wordmark { color: var(--eucalyptus); font-size: 1.15rem; font-weight: 700; letter-spacing: .14em; text-decoration: none; white-space: nowrap; }
+  .wordmark span { color: var(--clay); }
+  .site-header nav, .footer-main nav { display: flex; align-items: center; gap: clamp(20px, 3vw, 42px); }
+  .site-header nav a, .header-link, .footer-main nav a { font-size: .9rem; text-decoration: none; transition: color .2s ease; }
+  .site-header nav a:hover, .footer-main nav a:hover { color: var(--eucalyptus); }
+  .header-link { padding: 9px 0; border-bottom: 1px solid var(--eucalyptus); color: var(--eucalyptus); white-space: nowrap; }
+  .header-link span { margin-left: 9px; }
+  .hero { background: var(--ivory); overflow: hidden; }
+  .hero-inner { min-height: 690px; display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(390px, .9fr); align-items: center; gap: 3%; padding-block: 36px 25px; }
+  .hero-copy { padding-block: 32px; position: relative; z-index: 1; }
+  .eyebrow { color: var(--eucalyptus); font-size: .78rem; line-height: 1.3; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; margin: 0 0 22px; }
+  .eyebrow-dot, .caption-dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin: 0 9px 1px 0; background: var(--clay); }
+  h1, h2 { font-family: var(--serif); font-weight: 400; letter-spacing: -.055em; }
+  .hero h1 { max-width: 700px; margin: 0 0 26px; font-size: clamp(3.9rem, 6.2vw, 5.2rem); line-height: .91; }
+  .hero h1 em, h2 em { color: var(--eucalyptus); font-style: italic; }
+  .hero-description { max-width: 470px; margin: 0; color: var(--muted); font-size: 1.15rem; line-height: 1.72; }
+  .button { min-height: 54px; display: inline-flex; align-items: center; justify-content: center; gap: 20px; padding: 0 23px; border: 1px solid transparent; border-radius: 4px; font-size: .92rem; font-weight: 600; text-decoration: none; transition: transform .18s ease, background-color .18s ease, color .18s ease; }
+  .button:hover { transform: translateY(-2px); }
+  .button-primary { margin-top: 30px; background: var(--eucalyptus); color: var(--cream); }
+  .button-primary:hover { background: #405849; }
+  .hero-footnote { margin: 26px 0 0; color: var(--muted); font-family: var(--serif); font-size: 1rem; font-style: italic; }
+  .hero-product, .diary-product, .trends-product { margin: 0; display: flex; flex-direction: column; align-items: center; }
+  .hero-product { position: relative; align-self: stretch; justify-content: center; padding: 12px 0 35px; }
+  .device { padding: 8px; border: 1px solid rgba(40,49,44,.27); background: #262B28; border-radius: 36px; box-shadow: 0 24px 55px rgba(40,49,44,.19), 0 4px 12px rgba(40,49,44,.12); overflow: hidden; }
+  .device img { display: block; width: 100%; height: auto; border-radius: 28px; }
+  .device-hero { width: min(100%, 338px); position: relative; z-index: 1; }
+  .hero-product::before { content: ''; position: absolute; width: min(90%, 490px); aspect-ratio: 1; border-radius: 50%; background: #E9EDE5; top: 50%; left: 50%; transform: translate(-50%, -52%); }
+  figcaption { margin-top: 17px; color: var(--muted); font-size: .78rem; letter-spacing: .035em; }
+  .hero-product figcaption { position: absolute; z-index: 2; bottom: 5px; right: 7%; padding: 10px 14px; background: var(--cream); border-radius: 2px; }
+  .hero-edge { display: flex; justify-content: space-between; padding-block: 0 21px; color: var(--muted); font-size: .72rem; letter-spacing: .08em; text-transform: uppercase; }
+  .hero-edge i { color: var(--clay); font-style: normal; padding-inline: 4px; }
+  .section { padding-block: clamp(82px, 9vw, 122px); }
+  .why { background: var(--cream); }
+  .why.section { padding-block: clamp(62px, 6.5vw, 88px); }
+  .why-layout { display: grid; grid-template-columns: 1fr .85fr; align-items: center; gap: 12%; }
+  .why-lead h2, .tracking h2, .patterns h2, .privacy h2 { margin: 0; font-size: clamp(3.2rem, 5.6vw, 5.4rem); line-height: .98; }
+  .why-message { max-width: 500px; border-left: 1px solid var(--sage); padding: 3px 0 3px 32px; }
+  .why-message p { margin: 0 0 19px; color: var(--muted); font-size: 1.08rem; line-height: 1.78; }
+  .why-signoff { display: inline-block; margin-top: 3px; color: var(--eucalyptus); font-family: var(--serif); font-size: 1.15rem; font-style: italic; }
+  .why-signoff span { color: var(--clay); margin-left: 8px; font-family: var(--sans); font-size: .8rem; }
+  .tracking { background: #EEF0E9; overflow: clip; }
+  .tracking-layout { display: grid; grid-template-columns: minmax(290px, .82fr) minmax(0, 1.18fr); align-items: center; gap: clamp(54px, 10vw, 140px); }
+  .diary-product { align-self: center; }
+  .device-editorial { width: min(100%, 300px); }
+  .tracking-copy { padding-block: 15px; }
+  .section-intro { max-width: 540px; margin: 24px 0 0; color: var(--muted); font-size: 1.08rem; line-height: 1.75; }
+  .tracking-list { list-style: none; padding: 0; margin: 31px 0 0; border-top: 1px solid rgba(40,49,44,.2); }
+  .tracking-list li { min-height: 78px; display: grid; grid-template-columns: 38px 1fr; gap: 13px; align-items: center; border-bottom: 1px solid rgba(40,49,44,.2); }
+  .list-mark { align-self: start; padding-top: 23px; color: var(--eucalyptus); font-size: .72rem; letter-spacing: .06em; }
+  .tracking-list h3 { margin: 0 0 3px; font-family: var(--serif); font-size: 1.3rem; font-weight: 400; }
+  .tracking-list p { margin: 0; color: var(--muted); font-size: 1rem; line-height: 1.5; }
+  .patterns { background: var(--eucalyptus); color: var(--cream); overflow: clip; }
+  .patterns-layout { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(310px, .9fr); align-items: center; gap: 8%; }
+  .patterns .eyebrow { color: #D7E1D4; }
+  .patterns h2 em { color: #D7E1D4; }
+  .patterns-copy { max-width: 620px; }
+  .patterns .section-intro { max-width: 495px; color: rgba(255,254,250,.82); }
+  .patterns-note { margin: 27px 0 0; color: #E9C4B3; font-family: var(--serif); font-size: 1.05rem; font-style: italic; }
+  .trends-product { justify-self: center; }
+  .trends-product figcaption { color: rgba(255,254,250,.82); }
+  .trends-product .caption-dot { background: #E9C4B3; }
+  .privacy { background: var(--cream); }
+  .privacy-layout { display: grid; grid-template-columns: .9fr 1.1fr; gap: 10%; align-items: center; }
+  .privacy-copy { max-width: 620px; }
+  .privacy-intro { margin: 0; color: var(--charcoal); font-family: var(--serif); font-size: clamp(1.45rem, 2.2vw, 1.9rem); line-height: 1.42; }
+  .privacy-details { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 29px; padding-top: 19px; border-top: 1px solid var(--line); }
+  .detail-index { color: var(--clay); font-size: .7rem; letter-spacing: .08em; }
+  .privacy-details h3 { margin: 12px 0 6px; font-family: var(--serif); font-size: 1.2rem; font-weight: 400; }
+  .privacy-details p, .privacy-caveat { color: var(--muted); font-size: .9rem; line-height: 1.6; }
+  .privacy-details p { margin: 0; }
+  .privacy-caveat { margin: 24px 0 0; padding-left: 14px; border-left: 2px solid var(--sage); }
+  .coming { padding-block: clamp(83px, 10vw, 124px); background: #E8EAE1; text-align: center; }
+  .coming-inner { display: flex; flex-direction: column; align-items: center; }
+  .coming .eyebrow { margin-bottom: 18px; }
+  .coming h2 { margin: 0; font-size: clamp(3.3rem, 6.7vw, 6.2rem); line-height: .96; }
+  .coming h2 em { color: var(--eucalyptus); }
+  .button-light { margin-top: 29px; border-color: var(--eucalyptus); color: var(--eucalyptus); }
+  .button-light:hover { background: var(--eucalyptus); color: var(--cream); }
+  .site-footer { background: var(--ivory); }
+  .footer-main { min-height: 112px; display: flex; align-items: center; justify-content: space-between; gap: 25px; border-bottom: 1px solid var(--line); }
+  .footer-main > p { color: var(--muted); font-family: var(--serif); font-size: 1rem; font-style: italic; }
+  .footer-main nav { gap: clamp(17px, 2.5vw, 34px); }
+  .footer-bottom { min-height: 68px; display: flex; align-items: center; justify-content: space-between; gap: 24px; color: var(--muted); font-size: .75rem; }
+  .footer-bottom p { margin: 0; text-align: center; }
+  .footer-bottom a { color: var(--eucalyptus); text-decoration: none; white-space: nowrap; }
+  a:focus-visible { outline: 3px solid var(--clay); outline-offset: 4px; border-radius: 3px; }
+  @media (max-width: 1024px) {
+    .shell { width: min(100% - 52px, 880px); }
+    .site-header { gap: 17px; }
+    .site-header nav { gap: 19px; }
+    .site-header nav a, .header-link { font-size: .83rem; }
+    .hero-inner { min-height: 620px; grid-template-columns: minmax(0, 1fr) minmax(330px, .9fr); gap: 3%; }
+    .hero h1 { font-size: clamp(3.5rem, 5.7vw, 4rem); }
+    .device-hero { width: min(100%, 310px); }
+    .why-layout { gap: 8%; }
+    .tracking-layout { gap: 8%; }
+    .patterns-layout { gap: 6%; }
+    .device-editorial { width: min(100%, 275px); }
+  }
+  @media (max-width: 850px) {
+    .hero-inner { min-height: unset; grid-template-columns: 1fr; gap: 15px; padding-block: 46px 23px; }
+    .hero-copy { padding-block: 10px 0; }
+    .hero-product { width: min(100%, 440px); justify-self: center; }
+  }
+  @media (max-width: 760px) {
+    .shell { width: min(100% - 40px, 560px); }
+    .site-header { min-height: 75px; flex-wrap: wrap; padding-block: 15px 13px; }
+    .site-header nav { order: 3; width: 100%; justify-content: space-between; gap: 12px; padding-top: 8px; }
+    .site-header nav a, .header-link { font-size: .82rem; }
+    .hero-inner { min-height: unset; display: flex; flex-direction: column; align-items: stretch; gap: 5px; padding-block: 45px 25px; }
+    .hero-copy { padding-block: 10px 0; }
+    .hero h1 { font-size: clamp(4.15rem, 15vw, 6rem); }
+    .hero-description { max-width: 510px; font-size: 1.08rem; }
+    .hero-product { align-self: center; width: min(100%, 420px); padding-block: 34px 47px; }
+    .device-hero { width: min(77%, 300px); }
+    .hero-product::before { width: 95%; }
+    .hero-product figcaption { right: 0; bottom: 18px; }
+    .hero-edge { padding-bottom: 17px; font-size: .66rem; }
+    .section { padding-block: 76px; }
+    .why-layout, .tracking-layout, .patterns-layout, .privacy-layout { grid-template-columns: 1fr; gap: 35px; }
+    .why-message { margin-left: 3px; }
+    .why-lead h2, .tracking h2, .patterns h2, .privacy h2 { font-size: clamp(3.35rem, 11vw, 4.5rem); }
+    .tracking-layout { gap: 42px; }
+    .tracking-copy { grid-row: 1; }
+    .diary-product { grid-row: 2; }
+    .device-editorial { width: min(76%, 300px); }
+    .patterns-layout { gap: 42px; }
+    .trends-product { justify-self: center; }
+    .privacy-layout { gap: 26px; }
+    .privacy-details { gap: 19px; }
+    .footer-main { min-height: 0; padding-block: 25px; display: grid; grid-template-columns: 1fr 1fr; gap: 17px; }
+    .footer-main > p { margin: 0; text-align: right; font-size: .92rem; }
+    .footer-main nav { grid-column: 1 / -1; flex-wrap: wrap; justify-content: space-between; gap: 14px; }
+    .footer-bottom { min-height: 0; padding-block: 16px; flex-wrap: wrap; gap: 12px 20px; font-size: .72rem; }
+    .footer-bottom p { order: 3; flex-basis: 100%; text-align: left; line-height: 1.5; }
+  }
+  @media (max-width: 390px) {
+    .shell { width: calc(100% - 36px); }
+    .site-header nav { gap: 8px; }
+    .site-header nav a { font-size: .84rem; }
+    .hero h1 { font-size: 4rem; }
+    .hero-product figcaption { font-size: .7rem; padding: 8px 10px; }
+    .tracking-list li { grid-template-columns: 30px 1fr; gap: 10px; }
+    .privacy-details { grid-template-columns: 1fr; gap: 20px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; }
+  }
+</style>

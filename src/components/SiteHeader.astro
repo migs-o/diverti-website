@@ -1,0 +1,37 @@
+<header class="site-header shell">
+  <a class="wordmark" href="/#top" aria-label="DIVERTI home">DIVERTI<span>.</span></a>
+  <nav aria-label="Main navigation">
+    <a href="/#why">Why DIVERTI</a>
+    <a href="/#tracking">Daily tracking</a>
+    <a href="/#patterns">Your patterns</a>
+    <a href="/privacy">Privacy</a>
+    <a href="/support">Support</a>
+  </nav>
+  <a class="header-link" href="/#coming-soon">Coming soon <span aria-hidden="true">↗</span></a>
+</header>
+
+<style>
+  .site-header { min-height: 88px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+  .wordmark { color: var(--eucalyptus); font-size: 1.15rem; font-weight: 700; letter-spacing: .14em; text-decoration: none; white-space: nowrap; }
+  .wordmark span { color: var(--clay); }
+  nav { display: flex; align-items: center; justify-content: center; gap: clamp(13px, 1.65vw, 24px); }
+  nav a, .header-link { color: var(--charcoal); font-size: .84rem; text-decoration: none; transition: color .2s ease; white-space: nowrap; }
+  nav a:hover { color: var(--eucalyptus); }
+  .header-link { padding: 9px 0; border-bottom: 1px solid var(--eucalyptus); color: var(--eucalyptus); }
+  .header-link:hover { color: #405849; }
+  .header-link span { margin-left: 8px; }
+  @media (max-width: 1024px) {
+    .site-header { gap: 16px; }
+    nav { gap: 13px; }
+    nav a, .header-link { font-size: .78rem; }
+  }
+  @media (max-width: 760px) {
+    .site-header { min-height: 75px; flex-wrap: wrap; padding-block: 15px 13px; }
+    nav { order: 3; width: 100%; justify-content: space-between; flex-wrap: wrap; gap: 9px 14px; padding-top: 8px; }
+    nav a, .header-link { font-size: .82rem; }
+  }
+  @media (max-width: 390px) {
+    nav { column-gap: 9px; }
+    nav a { font-size: .77rem; }
+  }
+</style>

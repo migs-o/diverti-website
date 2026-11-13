@@ -1,0 +1,112 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+---
+<PageLayout
+  title="Privacy Policy — DIVERTI"
+  description="Learn how DIVERTI stores and handles tracking records, food lookup requests, exports, and support inquiries."
+>
+  <article class="policy-page">
+    <header class="page-heading">
+      <p class="eyebrow">Your information, explained</p>
+      <h1>Privacy <em>Policy</em></h1>
+      <p class="effective">Effective date: <strong>[INSERT EFFECTIVE DATE BEFORE PUBLICATION]</strong></p>
+      <p class="lede">This policy describes how DIVERTI handles information when you use the app or visit our website.</p>
+    </header>
+
+    <div class="prose">
+      <section>
+        <h2>Who we are</h2>
+        <p>DIVERTI — Diverticular Health Tracker is developed and operated by Michael Ortiz, an individual developer. DIVERTI is intended for adults 18 and older.</p>
+        <p>For privacy questions, contact <a href="mailto:support@diverti.app">support@diverti.app</a>.</p>
+      </section>
+
+      <section>
+        <h2>Information stored on your iPhone</h2>
+        <p>DIVERTI stores information you enter in an app-private SQLite database on your device. This can include food and fiber entries, hydration logs, symptoms and their severity, bowel movement records, notes, timestamps, and personal goal history. Hydration preferences and customized quick-add settings are stored in an app-private local file.</p>
+        <p>DIVERTI does not require an account and does not currently provide DIVERTI cloud synchronization. The local SQLite database does not have application-level encryption. Your device’s passcode and security settings may help protect information stored on the device.</p>
+      </section>
+
+      <section>
+        <h2>Food search and barcode lookup</h2>
+        <p>If you choose to search for a food, the search terms may be sent to Open Food Facts. If you scan a barcode, its barcode value may be sent to Open Food Facts and/or a DIVERTI lookup service hosted on Cloudflare Workers. That service queries USDA FoodData Central for food information.</p>
+        <p>These food lookup requests do not include your journal entries, symptom notes, hydration records, or personal goals. DIVERTI requests camera permission for barcode scanning; according to the app’s lookup process, the barcode value—not camera images—is sent for lookup.</p>
+        <p>Food lookup providers and infrastructure may process request information. Cloudflare may process connection metadata such as your IP address. The USDA lookup service is designed to hash a connecting IP address for rate limiting and keep rate-limit timestamps for a limited period. These design details do not guarantee what a provider or infrastructure service may log or retain. Their handling is also subject to their own practices and policies.</p>
+      </section>
+
+      <section>
+        <h2>Exports and sharing</h2>
+        <p>You can export your information as CSV data or as a PDF clinician report. These files may include personal health-related entries and notes. DIVERTI does not encrypt exported files.</p>
+        <p>To share an export, DIVERTI creates a temporary local file for the iOS share sheet and attempts to remove that temporary file after sharing. An app, service, or recipient you choose may retain or upload a shared file under its own practices. Take care when choosing where to send or save an export.</p>
+        <p>CSV and PDF exports are not restorable DIVERTI backups.</p>
+      </section>
+
+      <section>
+        <h2>Deleting information</h2>
+        <p>Delete All clears journal entries and associated notes, saved foods, favorites and nutrition evidence, personal goal history, hydration preferences and customized quick-add settings. It also removes recognized inactive temporary export and backup artifacts where cleanup is possible. The app then returns to first-use defaults while retaining the internal database structure and migration information needed for the app to operate.</p>
+        <p>Delete All does not provide forensic or guaranteed irreversible erasure. It does not remove Apple-managed backups, files you previously exported, or copies held by other apps or recipients. Support cannot remotely access or delete the journal database stored on your iPhone.</p>
+      </section>
+
+      <section>
+        <h2>Backups and device loss</h2>
+        <p>DIVERTI does not currently offer its own backup or restore feature. Apple-managed device backups may include DIVERTI app data depending on your device and backup settings. If your iPhone is lost or replaced, DIVERTI cannot restore information from its own servers.</p>
+      </section>
+
+      <section>
+        <h2>Support emails and privacy inquiries</h2>
+        <p>When you contact DIVERTI Support, we receive your email address and the information you choose to provide. We use this information to respond to your request, troubleshoot issues, and handle privacy inquiries. We retain support correspondence only for as long as reasonably necessary for these purposes, including any applicable legal obligations. You may contact us to request deletion of your support correspondence, subject to applicable requirements.</p>
+        <p>Please avoid including sensitive health details or screenshots of your records unless they are needed to explain an issue.</p>
+      </section>
+
+      <section>
+        <h2>Website and technical request information</h2>
+        <p>The DIVERTI website is a static website and does not use analytics or a website account system. When a browser requests a website page, the hosting provider may process technical request information, such as an IP address, browser details, and the requested page, to deliver and protect the site. The provider’s handling and retention are governed by its own practices.</p>
+      </section>
+
+      <section>
+        <h2>Other services and device diagnostics</h2>
+        <p>DIVERTI does not currently include an account, advertising, analytics, third-party crash-reporting, or DIVERTI cloud-sync integration. This statement does not cover diagnostics or services provided by Apple, your device, or third-party infrastructure.</p>
+      </section>
+
+      <section>
+        <h2>Children’s privacy</h2>
+        <p>DIVERTI is intended for adults 18 and older and is not directed toward children. It is not designed for use by anyone under 18.</p>
+      </section>
+
+      <section>
+        <h2>Health information</h2>
+        <p>DIVERTI is a personal tracking and informational app. It does not diagnose, treat, or prevent medical conditions and is not a substitute for professional medical advice. For health concerns, speak with a qualified healthcare professional.</p>
+      </section>
+
+      <section>
+        <h2>Changes to this policy</h2>
+        <p>This policy may be updated as DIVERTI changes. When it is updated, the effective date above will be revised. Please review this page periodically for the current explanation of our practices.</p>
+      </section>
+
+      <section>
+        <h2>Contact</h2>
+        <p>Questions about this policy or a privacy inquiry? Email <a href="mailto:support@diverti.app">support@diverti.app</a>.</p>
+        <p>Michael Ortiz<br />DIVERTI — Diverticular Health Tracker<br /><a href="https://diverti.app">diverti.app</a></p>
+      </section>
+    </div>
+  </article>
+</PageLayout>
+
+<style>
+  .policy-page { padding: clamp(52px, 8vw, 100px) 24px clamp(68px, 8vw, 96px); }
+  .page-heading, .prose { width: min(100%, 740px); margin-inline: auto; }
+  .eyebrow { margin: 0 0 18px; color: var(--eucalyptus); font-size: .75rem; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; }
+  h1 { margin: 0; font-family: var(--serif); font-size: clamp(3.5rem, 8vw, 6.2rem); font-weight: 400; letter-spacing: -.06em; line-height: .96; }
+  h1 em { color: var(--eucalyptus); font-style: italic; }
+  .effective { margin: 24px 0 0; color: var(--muted); font-size: .9rem; }
+  .effective strong { color: var(--charcoal); font-weight: 600; }
+  .lede { max-width: 610px; margin: 24px 0 0; color: var(--muted); font-size: 1.12rem; line-height: 1.75; }
+  .prose { margin-top: clamp(48px, 7vw, 78px); }
+  .prose section { padding-block: 27px; border-top: 1px solid var(--line); }
+  h2 { margin: 0 0 13px; font-family: var(--serif); font-size: clamp(1.45rem, 2.5vw, 1.8rem); font-weight: 400; letter-spacing: -.025em; }
+  .prose p, .prose li { color: #505B54; font-size: 1rem; line-height: 1.7; }
+  .prose p { margin: 0 0 14px; }
+  .prose p:last-child { margin-bottom: 0; }
+  .prose a { color: #405849; text-underline-offset: 3px; }
+  .prose a:hover { color: #28312C; }
+  @media (max-width: 640px) { .policy-page { padding-inline: 20px; } }
+</style>
