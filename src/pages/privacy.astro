@@ -9,7 +9,7 @@ import PageLayout from '../layouts/PageLayout.astro';
     <header class="page-heading">
       <p class="eyebrow">Your information, explained</p>
       <h1>Privacy <em>Policy</em></h1>
-      <p class="effective">Effective date: <strong>[INSERT EFFECTIVE DATE BEFORE PUBLICATION]</strong></p>
+      <p class="effective">Effective date: <strong>November 13, 2026</strong></p>
       <p class="lede">This policy describes how DIVERTI handles information when you use the app or visit our website.</p>
     </header>
 
@@ -30,7 +30,8 @@ import PageLayout from '../layouts/PageLayout.astro';
         <h2>Food search and barcode lookup</h2>
         <p>If you choose to search for a food, the search terms may be sent to Open Food Facts. If you scan a barcode, its barcode value may be sent to Open Food Facts and/or a DIVERTI lookup service hosted on Cloudflare Workers. That service queries USDA FoodData Central for food information.</p>
         <p>These food lookup requests do not include your journal entries, symptom notes, hydration records, or personal goals. DIVERTI requests camera permission for barcode scanning; according to the app’s lookup process, the barcode value—not camera images—is sent for lookup.</p>
-        <p>Food lookup providers and infrastructure may process request information. Cloudflare may process connection metadata such as your IP address. The USDA lookup service is designed to hash a connecting IP address for rate limiting and keep rate-limit timestamps for a limited period. These design details do not guarantee what a provider or infrastructure service may log or retain. Their handling is also subject to their own practices and policies.</p>
+        <p>To enforce limits on the USDA lookup service, the active DIVERTI Cloudflare Worker hashes the connecting IP address directly with unsalted SHA-256 and uses that hash as a rate-limiting identifier. Rate-limit records include request timestamps and use a 60-second window; the Worker allows up to 10 requests per IP in that window. The Worker also limits upstream requests to 500 per 24-hour window, and upstream request records include timestamps and use a 24-hour window. Hashing does not make the IP identifier anonymous or guarantee that it cannot be associated with a connection.</p>
+        <p>Expired rate-limit and upstream request records are removed through cleanup operations, but removal is not guaranteed at an exact time. Cloudflare Workers Logs are disabled for this Worker. This does not mean Cloudflare performs no infrastructure-level processing or logging: Cloudflare may still process connection metadata, such as IP addresses, at the infrastructure level. Open Food Facts, USDA, Cloudflare, and other service providers may handle or retain technical request information under their own practices and policies.</p>
       </section>
 
       <section>
